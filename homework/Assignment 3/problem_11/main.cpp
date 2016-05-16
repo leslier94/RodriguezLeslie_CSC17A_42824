@@ -14,25 +14,27 @@ using namespace std;
 /*
  *
  */
+const int SIZE = 4;
 struct CompanyDivision {
     string division;
-    int quarter1;
-    int quarter2;
-    int quarter3;
-    int quarter4;
+    int quarter[SIZE];
     int sales;
 };
 
 int main(int argc, char** argv) {
-    CompanyDivision record;
-    fstream data("Data.dat", ios::in | ios::binary);
-    data.read(reinterpret_cast<char *> (&record), sizeof (record));
-    while (!data.eof())
-        cout << "Division ";
-    cin >> record.division;
-    cout << "Quarter 1";
-    cin >> record.quarter1;
-    cout << "Quarter 2";
-    cin >> record.quarter2;
-    cout << "Quarter 3";
-    cin >> record.quarter3;
+    CompanyDivision record[SIZE];
+    ofstream data;
+    data.open("Data.dat", ios::binary);
+    for (int i =0; i < SIZE; i++){
+    cout << "Division ";
+    cin >> record[i].division;
+
+    for (int j=0;j<SIZE;j++){
+    cout << "Quarter " << j+1 << endl;
+    cin >> record[i].quarter[j];
+    }
+    }
+    data.write(reinterpret_cast<char *> (&record), sizeof (record));
+    data.close();
+    return 0;
+}
