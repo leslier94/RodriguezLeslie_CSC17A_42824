@@ -11,6 +11,7 @@
 #include <ctime>
 #include <fstream>
 #include "PlayerOne.h"
+#include "PlayerTwo.h"
 #include "Characters.h"
 #include "Health.h"
 #include "PlayerLives.h"
@@ -30,6 +31,7 @@ int main(int argc, char** argv) {
     char c;
     char n;
     PlayerOne leslie;
+    PlayerTwo mark;
     Health les;
     Health opp;
     Characters nightwing;
@@ -48,21 +50,21 @@ int main(int argc, char** argv) {
    // cout << "Opp " << pTwo.getLife() << endl;
     cout << "You entered " << mon.getMoney() << " you may play up to " << pOne.getLife() << " times" << endl;
     cout << "Would you like to play a friend or one of our highly trained opponents " << endl;
-    cout << "A. 1 PLayer " << endl;
+    cout << "A. 1 Player " << endl;
     cout << "B. 2 Players " << endl;
     cin >> n;
     if (n=='a')
     {
         cout << "You chose to play one of our highly trained opponents" << endl;
-          cout << "Enter your name " << endl;
-    cin >> player;
-    leslie.setName(player);
-    cout << "Welcome " << leslie.getName() << endl;    
-    cout << "You have " << spiderman.getObjectCount() << " options to chose from " << endl;
-    playerChoice (quarters, &les, &leslie, &pOne);
-    cout <<"Chose the Arena " << endl;
-    displayArena();
-    while(pOne.getLife() > 0 ){
+        cout << "Enter your name " << endl;
+        cin >> player;
+        leslie.setName(player);
+        cout << "Welcome " << leslie.getName() << endl;    
+        cout << "You have " << spiderman.getObjectCount() << " options to chose from " << endl;
+        playerChoice (quarters, &les, &leslie, &pOne);
+        cout <<"Chose the Arena " << endl;
+        displayArena();
+        while(pOne.getLife() > 0 ){
 	cout << "Press C to continue " << endl;
 	cin >> c;
         cout <<"**************************************" << endl;
@@ -147,6 +149,15 @@ int main(int argc, char** argv) {
     {
         cout << "You chose to play a friend, things are about to get interesting " << endl;
         cout << "Beware of possible loss of friendship" << endl;
+        cout << "Enter player one name " << endl;
+        cin >> player;
+        cout <<"Enter player two name" << endl;
+        leslie.setName(player);
+        cout << "Welcome " << leslie.getName() << endl;    
+        cout << "You have " << spiderman.getObjectCount() << " options to chose from " << endl;
+        playerChoice (quarters, &les, &leslie, &pOne);
+        cout <<"Chose the Arena " << endl;
+        displayArena();
     }
 
         return 0;

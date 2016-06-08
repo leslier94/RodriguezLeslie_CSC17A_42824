@@ -9,6 +9,7 @@
       <itemPath>Money.h</itemPath>
       <itemPath>PlayerLives.h</itemPath>
       <itemPath>PlayerOne.h</itemPath>
+      <itemPath>PlayerTwo.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -51,6 +52,8 @@
       </item>
       <item path="PlayerOne.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="PlayerTwo.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
@@ -83,6 +86,8 @@
       <item path="PlayerLives.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="PlayerOne.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PlayerTwo.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
